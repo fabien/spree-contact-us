@@ -1,13 +1,16 @@
 Deface::Override.new(:virtual_path => "layouts/admin",
-                     :insert_bottom => "[data-hook='admin_tabs'], #admin_tabs[data-hook]",
+                     :name => "inquiries_admin_tab",
+                     :insert_bottom => "[data-hook='admin_tabs']",
                      :text => "<%= tab(:inquiries) %>")
 
 Deface::Override.new(:virtual_path => "admin/shared/_configuration_menu",
-                     :insert_bottom => "[data-hook='admin_configurations_sidebar_menu'], #admin_configurations_sidebar_menu[data-hook]",
+                     :name => "inquiries_configuration_sidebar_menu",
+                     :insert_bottom => "[data-hook='admin_configurations_sidebar_menu']",
                      :text => %[<li<%= ' class="active"' if controller.controller_name == 'inquiries' %>><%= link_to t("inquiries_settings"), admin_inquiries_settings_path %></li>])
 
 Deface::Override.new(:virtual_path => "admin/configurations/index",
-                     :insert_after => "[data-hook='admin_configurations_menu'], #admin_configurations_menu[data-hook]",
+                     :name => "inquiries_configuration_menu",
+                     :insert_after => "[data-hook='admin_configurations_menu']",
                      :text => %[
       <tr>
         <td><%= link_to t("inquiries_settings"), admin_inquiries_settings_path %></td>
