@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'spree_contact_us_hooks'
 
 module SpreeContactUs
   class Engine < Rails::Engine
