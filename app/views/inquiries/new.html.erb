@@ -10,7 +10,7 @@
 	<%= render "shared/error_messages", :target => @inquiry %>
 
         <p class="field">
-          <%= f.label :name, t('name') %>
+          <%= f.label :name, t('contact_name') %>
           <%= f.text_field :name, :class => 'required' %>
         </p>
         <p class="field">
@@ -36,7 +36,7 @@
             </p>
         <% end %>
         <p class="field textarea_field">
-          <%= f.label :message, t('message') %>
+          <%= f.label :message, t('contact_message') %>
           <%= f.text_area :message, :class => 'required' %>
         </p>
         </div>
